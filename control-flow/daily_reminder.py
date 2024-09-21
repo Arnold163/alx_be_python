@@ -15,3 +15,5 @@ match priority:
 
 if time_bound == "yes" and priority in ["high", "medium", "low"]:
     reminder = reminder + " It requires immediate attention today."
+
+print("Reminder: " + reminder [len("Reminder: "):])
