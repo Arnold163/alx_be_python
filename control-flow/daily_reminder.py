@@ -1,15 +1,15 @@
 # daily reminder
-task = input("enter the task description: ")
-priority = input("enter the priority level (high/medium/low): ").lower()
-time_bound = input("is the task time bound (yes/no): ").lower()
+task = input("enter your task: ")
+priority = input("priority level (high/medium/low): ").lower()
+time_bound = input("is it time-bound? (yes/no): ").lower()
 
 match priority:
     case "high":
-        reminder = f"The task {task} is high priority."
+        reminder = f"The task '{task}' is high priority."
     case "medium":
-        reminder = f"The task {task} is medium priority."
+        reminder = f"The task '{task}' is medium priority."
     case "low":
-        reminder = f"The task {task} is low priority."
+        reminder = f"The task '{task}' is low priority."
     case _:
         reminder = "Invalid priority level entered."
 
