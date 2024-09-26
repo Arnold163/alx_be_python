@@ -4,7 +4,7 @@ CELCIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 #function for conversion
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * CELCIUS_TO_FAHRENHEIT_FACTOR
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 #function for conversion
 def convert_to_fahrenheit(celsius):
@@ -32,4 +32,3 @@ def main():
 #call main function
 if __name__ == "__main__":
     main()  
-    
