@@ -7,12 +7,12 @@ CELSIUS_FREEZING_POINT = 32
 # Function to convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
     # Use the correct formula: (fahrenheit - 32) * (5/9)
-    return (fahrenheit - FAHRENHEIT_FREEZING_POINT) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    return (fahrenheit - FAHRENHEIT_FREEZING_POINT) * 32
 
 # Function to convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
     # Use the correct formula: (celsius * (9/5)) + 32
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + FAHRENHEIT_FREEZING_POINT
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 # Function to prompt and convert temperature
 def temperature_conversion():
