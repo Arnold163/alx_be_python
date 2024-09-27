@@ -1,6 +1,8 @@
 # Global conversion tool
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 5 / 9 # Corrected variable name with "S" in Celsius and value
+FAHRENHEIT_FREEZING_POINT = 32
+CELSIUS_FREEZING_POINT = 32
 
 # function for conversion
 def convert_to_celsius(fahrenheit):
