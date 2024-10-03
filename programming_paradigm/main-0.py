@@ -2,22 +2,23 @@
 from bank_account import BankAccount
 import argparse
 
-parser = argparse.ArgumentParser()
-
-parser.add_argument("action", choices=["deposit", "withdraw", "balance"])
-parser.add_argument("amount", type=float, nargs="?")
+parser = argparse.ArgumentParser(description="BankAccount Operations")
+parser.add_argument("--deposit", type=float, help="Amount to deposit")
+parser.add_argument("--withdraw", type=float, help="Amount to withdraw")
+parser.add_argument("--balance", action="store_true", help="Display current balance")
 args = parser.parse_args()
-
 
 account = BankAccount()
 
-if args.action == "deposit":
-    account.deposit(args.amount)
-    account.display_balance
-elif args.action == "withdraw":
-    if account.withdraw(args.amount):
-        account.display_balance
+if args.deposit:
+    account.deposit(args.deposit)
+    print(f"Deposited ${args.deposit:.2f}")
+
+if args.withdraw:
+    if account.withdraw(args.withdraw)
+        print(f"Withdrew ${args.withdraw:.2f}")
     else:
-        print("Insufficient funds")
-elif args.action == "balance":
-    account.display_balance
+        print(f"Insufficient funds")
+
+if args.balance:
+    print(f"Current balance: ${account.get_balance():.2f}")
