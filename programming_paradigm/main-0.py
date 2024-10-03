@@ -5,7 +5,7 @@ import argparse
 parser = argparse.ArgumentParser(description="BankAccount Operations")
 parser.add_argument("--deposit", type=float, help="Amount to deposit")
 parser.add_argument("--withdraw", type=float, help="Amount to withdraw")
-parser.add_argument("--balance", action="store_true", help="Display current balance")
+parser.add_argument("--balance", action="store_true", help="Current Balance")
 args = parser.parse_args()
 
 account = BankAccount()
