@@ -1,24 +1,32 @@
 #main page 
+import sys
 from bank_account import BankAccount
-import argparse
 
-parser = argparse.ArgumentParser(description="BankAccount Operations")
-parser.add_argument("--deposit", type=float, help="Amount to deposit")
-parser.add_argument("--withdraw", type=float, help="Amount to withdraw")
-parser.add_argument("--balance", action="store_true", help="Current Balance")
-args = parser.parse_args()
+def main():
+    account = BankAccount(100)
 
-account = BankAccount()
+    if len(sys.argv) < 2:
+        print("Usage: python main-0.py <command>:<amount>")
+        print("Commands: deposit, withdraw, display")
+        sys.exit(1)
 
-if args.deposit:
-    account.deposit(args.deposit)
-    print(f"Deposited ${args.deposit:.2f}")
+    command, *params = sys.argv[1].split(':')
+    amount = float(params[0]) if params else None
 
-if args.withdraw:
-    if account.withdraw(args.withdraw)
-        print(f"Withdrew ${args.withdraw:.2f}")
+    if command == "deposit" and amount is not None:
+        account.deposit(amount)
+        print(f"Deposited: ${amount: .2f}")
+        account.display_balance()
+    elif command =="withdraw" and amount is not None:
+        if account.withdraw(amount):
+            print(f"withdrew: ${amount: .2f}")
+            account.display_balance()
+        else:
+            print("Insufficient funds.")
+    elif command == "display":
+        account.display_balance()
     else:
-        print(f"Insufficient funds")
+        print("invalid command.")
 
-if args.balance:
-    print(f"Current balance: ${account.get_balance():.2f}")
+if __name__ == "__main__":
+    main()
