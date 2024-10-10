@@ -1,6 +1,6 @@
 #class static
 
-class calculator:
+class Calculator:
     calculation_type = "Arithmetic Operations"
 
     @staticmethod
